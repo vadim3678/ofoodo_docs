@@ -51,7 +51,7 @@ If true we load the same model with ingridients and options calling
 https://apis.bonee.dev/catalog/api/v1/catalog/items/single/{id}?sellingType={sellingType}
 ```
 Ingridients can be 'Optional' for checkbox or 'Required' for radio button 
-```json
+```
 {
   ...
   ingridientGroups: [{$id: "14", id: "9f98c3ed-0cd5-39ac-de1a-c69e0a389d12", parentId: null,…},…]
@@ -67,7 +67,7 @@ Ingridients can be 'Optional' for checkbox or 'Required' for radio button
 
 ```
 productOptionsGroups is a list of available options. Flag for default option - *byDefault: true*
-```json
+```
   0: {$id: "4", id: "c1e57bfb-fe39-b0d1-c1b7-3aec26421427", name: "a1e9c0aa-127f-0efb-b9b0-f6f84f0a3d6a",…}
     $id: "4"
     deleted: false
@@ -92,7 +92,7 @@ productOptionsGroups is a list of available options. Flag for default option - *
     type: "Text"
 ```
 productOptionVariants contents intersections of the options with prices for each
-```json
+```
 productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…},…]
   0: {$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…}
   1: {$id: "11", id: "c50d0f7e-bc96-37e8-15cf-1a2c4f7fd90f",…}
@@ -100,7 +100,7 @@ productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",�
   3: {$id: "13", id: "080d81e5-d31a-1892-35ea-cd822ebbeab8",…}
 ```
 where _optionsIds_ is a list of _productOption_ id's
-```json
+```
 productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…},…]
   0: {$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…}
     $id: "10"
