@@ -1,0 +1,55 @@
+{
+  "date": "Today",
+  "time": "15:30",
+  "guestCount": 1,
+  "asap": false,
+  "paymentSystem": "cash",
+  "cardId": "",
+  "items": [
+    {
+      "pictureUrl": "https://bonee.blob.core.windows.net/images-development/418df878-fdee-c1cf-5744-7139ed1b824a_1.png",
+      "pictures": null,
+      "productId": "6ef3acb0-8f60-483a-baf2-08d858a65d87",
+      "productName": "ed2e4c4e-b5b6-ca17-43b7-26e22616044e",
+      "description": "",
+      "quantity": 1,
+      "unitPrice": 50,
+      "id": "0bae52ff-cd9a-473b-a3ba-0e20ae2fee4f",
+      "portion": "Sat Nov 20 2021 15:52:06 GMT+0400 (Armenia Standard Time)",
+      "oldUnitPrice": 0,
+      "enableOrder": true,
+      "options": [
+        "6950d8f9-acc9-6e67-8a66-b30fb0f07d93",
+        "8400fba1-3189-cb59-3fde-af5591acfbdb"
+      ],
+      "optionNames": [
+        "bde9efd0-8ea7-d1e1-8249-ddda56bf4b7a",
+        "07368b17-0122-7d16-dc49-d88e1f1f0940"
+      ],
+      "ingredients": [
+        "3ef3caae-91d1-4b7a-75d4-08d858aa2e28",
+        "b631ff40-68ab-6936-4ae8-9c376e4bf17b"
+      ],
+      "ingredientNames": [
+        "d370bda2-a4e7-48d9-0ca5-8162894bc6b0",
+        "df748808-cc90-3843-ed23-e64a48258412"
+      ],
+      "isActiveDelivery": true,
+      "isActivePickup": true,
+      "isActiveReservation": true
+    }
+  ],
+  "note": "",
+  "name": "Karen 1",
+  "lastname": "Muradyan 2",
+  "phone": "8935591100",
+  "countryCode": "374",
+  "contactEmail": "karen_muradyan+14@yahoo.com",
+  "country": "Armenia",
+  "buyerId": "9ba73398-a79e-4c85-8316-523571ec3fd1",
+  "lang": "us",
+  "checkoutType": "reservation",
+  "successPaymentCallback": "http://localhost:4200/order/order-detail/o_hostName/o_trackingNumber",
+  "failPaymentCallback": "http://localhost:4200/order/order-detail/o_hostName/o_trackingNumber",
+  "pendingPaymentCallback": "http://localhost:4200/order/order-detail/o_hostName/o_trackingNumber"
+}
