@@ -6,7 +6,7 @@
 2.  Если блюдо выбираем на странице ресторана, как понять какой reuqired, а какой optional параметр
     для этого блюда? И как должны отправлять эту информацию в Бэк Энд.
 
- see in **_ordering.md_**
+see in **_ordering.md_**
 
 3. Каким видом отправляется в бэк информация, после чего происходит оплата (JSON)
 
@@ -22,7 +22,8 @@
    берем информацию о конкретном ресторане
 
 10. statusId и checkoutType ENUM нужны нам во всех вариантах, которые есть.
-    Now **_checkoutType_** is not in use
+
+  Now **_checkoutType_** is not in use
 
 ```ts
 checkoutTypeName: tCheckoutTypeName;
@@ -44,4 +45,4 @@ enum StatusIdENum {
 
 11. https://apis.bonee.net/order/api/v1/Orders/orders/{ID ????}/2020-08-03/2021-11-10 21:56:56/-1/-1/ когда берем список ордеров, этот ID параметр, который записан в линке, откуда его взять.
 
-Now work fine with _undefined_. May be it's obsolete
+  Now work fine with _undefined_. May be it's obsolete
