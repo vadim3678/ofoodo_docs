@@ -1,28 +1,11 @@
-# Ofoodo
+# Ordering
 
-- [Get Started](#get-started)
-- [Ofoodo products](#ofoodo-products)
+- [Loading catalog menu](#loading-catalog-menu)
+- [Sending an order](#sending-an-order)
 
-## Get Started
 
-### Apis required headers
 
-token for an application (the same for android and ios app)
-
-```
-clienttoken: 'example_LRoDLYJc5wVq/Tmc5u3BdnfR/sQ7LSgG7HTI48zQgmpHYkUEjr3/bPg6YjIzYjIwYTJjODMzNDA4NQ=='
-```
-
-token for all ofoodo applications
-
-```
-salePortalId: 'HfJSPUtdc50c5zbsQo2vjNpKV9yoBwbscdyz+uDo0c9fjWx2Pe0m0CcoqKivztBrKBYfaxv84X3TNHvhaK5X3w=='
-```
-
-## Ofoodo products
-
-### Loading catalog menu
-
+## Loading catalog menu
 ```
   https://apis.bonee.dev/catalog/api/v1/catalog/catalogtree?sellingType={sellingType}
 ```
@@ -49,7 +32,7 @@ If true we load the same model with ingridients and options calling
 ```
 https://apis.bonee.dev/catalog/api/v1/catalog/items/single/{id}?sellingType={sellingType}
 ```
-Ingridients can be 'Optional' for checkbox or 'Required' for radio button 
+Ingridients can be **'Optional'** for checkbox or **'Required'** for radio button 
 ```ts
 {
   ...
@@ -65,7 +48,7 @@ Ingridients can be 'Optional' for checkbox or 'Required' for radio button
 }
 
 ```
-productOptionsGroups is a list of available options. Flag for default option - *byDefault: true*
+***productOptionsGroups*** is a list of available options. Flag for default option - ***byDefault: true***
 ```ts
   0: {$id: "4", id: "c1e57bfb-fe39-b0d1-c1b7-3aec26421427", name: "a1e9c0aa-127f-0efb-b9b0-f6f84f0a3d6a",…}
     $id: "4"
@@ -91,7 +74,7 @@ productOptionsGroups is a list of available options. Flag for default option - *
     type: "Text"
     ...
 ```
-productOptionVariants contents intersections of the options with prices for each
+***productOptionVariants*** contents intersections of the options with prices for each
 ```ts
 productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…},…]
   0: {$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…}
@@ -100,7 +83,7 @@ productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",�
   3: {$id: "13", id: "080d81e5-d31a-1892-35ea-cd822ebbeab8",…}
   ...
 ```
-where _optionsIds_ is a list of _productOption_ id's
+where ***optionsIds*** is a list of ***productOption*** id's
 ```ts
 productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…},…]
   0: {$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",…}
@@ -114,10 +97,21 @@ productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",�
     price: 50
   ....
 ```
+
+## Sending an order
+
 to create order we call 
 ```
   https://apis.bonee.dev/httpaggregator/api/v1/Basket/paymentauto?api-version=1.0
 ```
+Examples of sent models you can see in **checkout-payloads** folder
+
+### Checkout models
+
+  > if time of the order is ***'asap'*** we send to the backend ***time: '00:00'***
+
+  > ***buyerId*** is new guid for every new basket
+
 ```ts
 export class CheckoutModel {
   name: string;
@@ -155,7 +149,49 @@ export class CheckoutDelivery extends CheckoutModel {
   lat: string;
 }
 
+export interface IBasketItem {
+    id: string;
+    productId: string;
+    productName: string;
+    description: string;
+    unitPrice: number;
+    oldUnitPrice: number;
+    quantity: number;
+    pictureUrl: string;
+    pictures: any[];
+    portion: string;
+    enableOrder: boolean;
+    options: string[];
+    optionNames: string[];
+    ingredients: string[];
+    ingredientNames?: string[];
+    isActiveDelivery: boolean;
+    isActivePickup: boolean;
+    isActiveReservation: boolean;
+}
 
 ```
+
+Successful response is:
+```json
+{
+    "$id": "1",
+    "basketId": null,
+    "orderId": 20675,
+    "onlinePaymentStatus": null,
+    "onlinePaymentMessage": null,
+    "isCreated": false,
+    "success": true,
+    "key": "HDBJT6XMZEAUDNNCVIFWSA",
+    "message": "",
+    "payUrl": "http://{host}/order/order-detail/georgia/HDBJT6XMZEAUDNNCVIFWSA",
+    "successPaymentUrl": null,
+    "pendingPaymentUrl": null,
+    "failPaymentUrl": null,
+    "step": 4
+}
+```
+If ***succes*** is not true, you can handle error based on ***onlinePaymentStatus***
+
 
 ## TO DO
