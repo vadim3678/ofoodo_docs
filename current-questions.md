@@ -20,6 +20,8 @@ see in [payment](payment.md)
 
 7. Как вызвать (посмотреть) стоимость доставки?
 
+see in [delivery cost](ordering.md#delivery-cost)
+
 8. Нужен API регистрации/входа в facebook и google
 
 9. Конкретно откуда надо взять “teamreferer” параметр, который в HEADERах передается requestам, когда
