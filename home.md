@@ -137,20 +137,18 @@ with specific header **_teamreferer: ofoodo_**
 
 Response is collection of such items
 
-```ts
-count: 6
-data: [{$id: "4",…}, {$id: "111",…}, {$id: "204",…}, {$id: "281",…}, {$id: "361",…}, {$id: "438",…}]
-groupCode: "discounts"
-groupId: "32ffc243-e6d0-4df2-90eb-440d4f01aef3"
-groupName: [{$id: "2", key: "e0df5c13-053d-490f-9603-a8278446829d", language: "ka", value: "ფასდაკლებები"},…]
-message: ""
-pageIndex: 0
-pageSize: -1
-success: true
+```json
+{
+    "count": 6,
+    "data": [{$id: "4",…}, {$id: "111",…}, {$id: "204",…}, {$id: "281",…}, {$id: "361",…}, {$id: "438",…}],
+    "groupCode": "discounts",
+    "groupId": "32ffc243-e6d0-4df2-90eb-440d4f01aef3",
+    "groupName": [{$id: "2", key: "e0df5c13-053d-490f-9603-a8278446829d", language: "ka", value: "ფასდაკლებები"},…],
+    "message": "",
+    "pageIndex": 0,
+    "pageSize": -1,
+    "success": true
+}
 ```
 
 where **_data_** is collection of portals
-
-```
-
-```

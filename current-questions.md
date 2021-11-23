@@ -24,6 +24,8 @@ see in [delivery cost](ordering.md#delivery-cost)
 
 8. Нужен API регистрации/входа в facebook и google
 
+see in [authorization](authorization.md)
+
 9. Конкретно откуда надо взять “teamreferer” параметр, который в HEADERах передается requestам, когда
    берем информацию о конкретном ресторане
 

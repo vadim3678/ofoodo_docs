@@ -106,6 +106,8 @@ productOptionVariants: [{$id: "10", id: "39b625b8-fb6f-736d-d5d2-11bbbabf703c",â
   ....
 ```
 
+[go to start](#ordering)
+
 ## Delivery cost
 
 First we get available agents (for now we have singe agent)
@@ -168,6 +170,8 @@ payload:
 ```
 
 Response is a number
+
+[go to start](#ordering)
 
 ## Sending an order
 
@@ -266,5 +270,7 @@ Successful response is:
 ```
 
 If **_succes_** is not true, you can handle error based on **_onlinePaymentStatus_**
+
+[go to start](#ordering)
 
 ## TO DO
