@@ -227,6 +227,9 @@ export class CheckoutDelivery extends CheckoutModel {
 }
 
 export interface IBasketItem {
+ /**
+   * New guid for added menu item 
+   */
   id: string;
   productId: string;
   productName: string;
@@ -236,6 +239,9 @@ export interface IBasketItem {
   quantity: number;
   pictureUrl: string;
   pictures: any[];
+  /**
+    * Represets string of current date and time
+    */
   portion: string;
   enableOrder: boolean;
   options: string[];
